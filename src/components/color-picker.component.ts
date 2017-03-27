@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter, OnInit, Self } from '@angular/core';
-import { NgModel, ControlValueAccessor } from '@angular/forms';
+import { Component, Input, OnInit, Self } from '@angular/core';
+import { ControlValueAccessor, NgModel } from '@angular/forms';
 
 import { ColorPickerConfiguration } from '../models';
 import { IColorPickerConfiguration } from '../interfaces';
@@ -63,7 +63,7 @@ export class ColorPickerComponent implements ControlValueAccessor, OnInit {
     }
 
     /** ControlValueAccessor implementation. */
-    writeValue(value: any): void { }
+    writeValue(_value: any): void { }
 
     /** ControlValueAccessor implementation. */
     registerOnChange(fn: (_: any) => {}): void {
